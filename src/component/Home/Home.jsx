@@ -2,7 +2,6 @@ import { useSelector, useDispatch } from 'react-redux'
 import { decrement, increment, incrementByAmount } from "../Slice/CounterSlice"
 import { useState } from 'react'
 import PostsComponent from '../PostComponent'
-import SocketComponent from '../Socket/socketConnection'
 
 export function Home() {
     const count = useSelector((state) => state.counter.value)
@@ -65,7 +64,7 @@ export function Home() {
             {/* PostsComponent Section */}
             <div className="mt-8 w-full">
                 <PostsComponent />
-                <SocketComponent/>
+                
             </div>
         </div>
     )

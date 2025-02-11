@@ -4,6 +4,7 @@ import Login from './component/login';
 import "./index.css"
 import "../src/component/Home/Home.jsx"
 import Home from '../src/component/Home/Home.jsx';
+import SocketComponent from './SocketCode/Socket/socketConnection.jsx';
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -23,6 +24,7 @@ function App() {
           isAuthenticated ? <Home /> : <Navigate to="/login" replace />   
         }
       />
+      <Route path='/socket' element={<SocketComponent/>}/>
     </Routes>
   );
 }
